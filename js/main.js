@@ -3,9 +3,9 @@ function object(id, src) {
     this.src = src;
 }
 
-$.getJSON('/data/data.json', function(data) {
+$.getJSON('data/data.json', function(data) {
     //data is the JSON string
-    console.log(data)
+    console.log(data.objects)
 });
 
 var boxObjectsDict = { 0: [1, 2, 3], 1: [1, 2, 3]};

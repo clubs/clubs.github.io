@@ -1,3 +1,19 @@
+$(document).ready(function () {
+  $('.img-thumbnail').click(function() {
+    var id = $(this).attr('id');
+    id = id.slice(10, 30);
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $("#" + id ).offset().top - 90
+    }, 1000);
+  });
+
+  $('.box').each(function() {
+    $(this).append($(this).attr('id'));
+  });
+
+});
+
+
 function object(id, src) {
     this.id = id;
     this.src = src;

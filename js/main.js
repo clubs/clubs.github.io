@@ -30,7 +30,7 @@ function removeDuplicates(arr){
         if(unique_array.indexOf(arr[i]) == -1){
             unique_array.push(arr[i])
         } else {
-          console.log(arr[i])
+          console.log("Duplicate object in box : " + arr[i])
         }
     }
     return unique_array
@@ -40,7 +40,6 @@ function buildBoxHtml(boxId) {
   var html = '';
 
   boxObjects = boxes[boxId].objects;
-  console.log(boxId);
   boxObjects = removeDuplicates(boxObjects)
   boxObjects.forEach((objectId, index) => {
     html += buildObjectHtml(objectId)

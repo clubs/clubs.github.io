@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>CLUBS - Placeholder</title>
+    <title>CLUBS Dataset</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -55,7 +55,7 @@
       <div class="masthead-content">
         <div class="container">
           <h1 class="masthead-heading mb-0">CLUBS</h1>
-          <h2 class="masthead-subheading mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+          <h2 class="masthead-subheading mb-0">An RGB-D Dataset with Cluttered Box Scenes Containing Household Objects</h2>
           <p class="masthead-authors mb-0">Tonci Novkovic, Fadri Furrer, Marko Panjek, Margarita Grinvald, Roland Siegwart, and Juan Nieto</p>
           <p class="mb-0">Autonomous Systems Lab, ETH Zurich, Switzerland</p>
         </div>
@@ -206,57 +206,36 @@
         <div class="row align-items-center">
           <div class="col-lg-12 order-lg-1">
             <div class="p-4">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="container" id="publication">
-        <div class="row align-items-center">
-          <div class="col-lg-12">
-            <div class="p-4">
-              <h4>Publications</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
-
-              If you use the CLUBS data or code please cite:
-              <pre>
-                <code>
-@inproceedings{test,
-    title={TEST},
+              <p>This is an official webpage of the CLUBS dataset. You can see an overview of the box scenes above. More information is available upon clicking on the interested gif. If you are using this dataset please cite the following publication: </p>
+<pre><code>@inproceedings{to_appear,
+    title={CLUBS - An RGB-D Dataset with Cluttered Box Scenes Containing Household Objects},
     author={Novkovic, Tonci and Furrer, Fadri and Panjek, Marko and Grinvald, Margarita and Siegwart, Roland and Nieto, Juan},
-    booktitle = {TEST},
-    year = {2018}
-}</code>
-              </pre>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="container" id="download">
-        <div class="row align-items-center">
-          <div class="col-lg-12">
-            <div class="p-4">
-              <h4>Download</h4>
+    booktitle = {to_appear},
+    year = {to_appear}
+}</code></pre>
+              <p><br><b>DOWNLOAD:</b>
+                <br>The whole dataset can be downloaded from the following links:</p>
               <ul class="list-unstyled">
-                <li><a href="#">Labeled dataset (~156 GB)</a></li>
-                <li><a href="#">Unlabeled dataset (~156 GB)</a></li>
+                <li><a href="#">Sample Data (Coming soon)</a></li>
+                <li><a href="#">Object Scenes (Coming soon)</a></li>
+                <li><a href="#">Box Scenes (Coming soon)</a></li>
               </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="container" id="code">
-        <div class="row align-items-center">
-          <div class="col-lg-12">
-            <div class="p-4">
-              <h4>Code</h4>
-              <p>Please visit our main project repository for more information and access to code, data, and trained models: https://github.com/Test/Test</p>
+
+              <p><br><b>TOOLS:</b>
+                <br>This dataset comes with a set of tools which are avilable on our repo: <br>
+                <a href="https://github.com/ethz-asl/clubs_dataset_tools">clubs_dataset_tools</a>
+                <br><br>
+                These tools include:
+                <ul style="list-style-type:circle">
+                  <li>Download script for different parts of the dataset</li>
+                  <li>Script for computing depth images from an IR stereo pair</li>
+                  <li>Script for generating point clouds</li>
+                  <li>Script for registering depth images to corresponding RGB images</li>
+                  <li>Script for displaying label images in color</li>
+                  <li>Camera calibration script</li>
+                </ul>
+              </p>
+
             </div>
           </div>
         </div>

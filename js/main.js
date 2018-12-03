@@ -53,20 +53,20 @@ function removeDuplicates(arr){
 }
 
 function buildBoxHtml(boxId) {
-  var html = '';
+  var html = '<div class="row">'
+  html += '<div class="col-12 mb-3"><img class="img-thumbnail" src="gif/box_' + boxId.toString().padStart(3, '0') + '.gif" alt=""></div>';
+
 
   boxObjects = boxes[boxId].objects;
   boxObjects = removeDuplicates(boxObjects)
   boxObjects.forEach((objectId, index) => {
     html += buildObjectHtml(objectId)
   });
+  html += '</div>';
   return html;
 }
 
 function buildObjectHtml(objectId) {
-  var html = '<div class="row">'
-  html += '<div class="col-6 mb-3"><img  class="img-fluid img-thumbnail" src="img/objects/' + objects[objectId].filename + '"></div>';
-  html += '<div class="col-6">' + objects[objectId].filename + '</div>';
-  html += '</div>';
+  var html = '<div class="col-4 mb-3"><img  class="img-fluid img-thumbnail" src="img/objects/' + objects[objectId].filename + '">' + objects[objectId].filename + '</div>';
   return html
 }

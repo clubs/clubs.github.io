@@ -1,10 +1,9 @@
-$(document).ready(function () {
-  $('.img-thumbnail').click(function() {
-    var id = $(this).attr('id');
-    id = id.slice(10, 30);
-    $([document.documentElement, document.body]).animate({
-        scrollTop: $("#" + id ).offset().top - 90
-    }, 1000);
+$(document).ready(function() {
+  $('.test, .nav-link, .navbar-brand, .new-button').click(function() {
+    var sectionTo = $(this).attr('href');
+    $('html, body').animate({
+      scrollTop: $(sectionTo).offset().top - 90
+    }, 700);
   });
 
   $('.box').each(function() {

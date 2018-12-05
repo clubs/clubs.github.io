@@ -53,19 +53,21 @@ function removeDuplicates(arr){
 
 function buildBoxHtml(boxId) {
   var html = '<div class="row">'
-  html += '<div class="col-12 mb-3"><img class="img-thumbnail" src="gif/box_' + boxId.toString().padStart(3, '0') + '.gif" alt=""></div>';
-
+  html += '<div class="col-auto pl-5"><center><img class="img-fluid" src="gif/box_' + boxId.toString().padStart(3, '0') + '.gif" alt=""></center></div>';
+  html += '<div class="col px-5"><div class="row">'
 
   boxObjects = boxes[boxId].objects;
   boxObjects = removeDuplicates(boxObjects)
   boxObjects.forEach((objectId, index) => {
     html += buildObjectHtml(objectId)
   });
-  html += '</div>';
+
+  html += '</div></div></div>';
   return html;
 }
 
 function buildObjectHtml(objectId) {
-  var html = '<div class="col-4 mb-3"><img  class="img-fluid img-thumbnail" src="img/objects/' + objects[objectId].filename + '">' + objects[objectId].filename + '</div>';
+  id = objects[objectId].filename.slice(1, 3);
+  var html = '<div class="col-2 px-2 pb-2"><img  class="img-fluid img-fluid" src="img/objects/' + objects[objectId].filename + '"><span><center>' + id + '</center></span></div>';
   return html
 }

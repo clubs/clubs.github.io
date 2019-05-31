@@ -17,6 +17,7 @@ function object(id, src) {
 
 var objects;
 var boxes;
+var objectScenes;
 
 $.getJSON('data/boxes.json', function(data) {
   // data is the JSON string
@@ -27,6 +28,59 @@ $.getJSON('data/objects.json', function(data) {
   // data is the JSON string
   objects = data.objects;
 });
+
+$.getJSON('data/object_scenes.json', function(data) {
+  // data is the JSON string
+  objectScenes = data.object_scenes;
+});
+
+function popupObjectList() {
+  var objectListHtml = buildObjectListHtml()
+  $('#objectListPopupBody').html(objectListHtml);
+  $('#objectListModal').modal();
+}
+
+function buildObjectListHtml() {
+  var html = '<table class="table table-sm table-hover">'
+  html += '<thead> <tr>';
+  html += '<th scope="col"><span><center>id</center></span></th>';
+  html += '<th scope="col"><span><center>Image</center></span></th>';
+  html += '<th scope="col"><span><center>Class</center></span></th>';
+  html += '<th scope="col"><span><center>Sub-class</center></span></th>';
+  html += '<th scope="col"><span><center>Sub-sub-class</center></span></th>';
+  html += '<th scope="col"><span><center>Shape</center></span></th>';
+  html += '<th scope="col"><span><center>Rigidity</center></span></th>';
+  html += '<th scope="col"><span><center>Download</center></span></th>';
+  html += '</tr> </thead> <tbody>';
+
+  objectScenes.forEach(
+      (objectScene, index) => {html += buildObjectSceneHtml(objectScene)});
+
+
+  html += '</tbody> </table>';
+  return html;
+}
+
+function buildObjectSceneHtml(objectScene) {
+  console.log(objectScene)
+  var html = '<tr>';
+  html += '<th scope="row"><span><center>' + objectScene.id.toString() +
+      '</center></span></th>';
+  html += '<td><img class="img-fluid img-fluid" src="img/objects/' +
+      objects[objectScene.id].filename + '"></td>';
+  html += '<td><span><center>' + objectScene.category + '</center></span></td>';
+  html +=
+      '<td><span><center>' + objectScene.sub_category + '</center></span></td>';
+  html += '<td><span><center>' + objectScene.sub_sub_category +
+      '</center></span></td>';
+  html += '<td><span><center>' + objectScene.shape + '</center></span></td>';
+  html += '<td><span><center>' + objectScene.rigidity + '</center></span></td>';
+  html += '<td><span><center>' +
+      'TODO' +
+      '</center></span></td>';
+  html += '</tr>';
+  return html;
+}
 
 function popup(id) {
   boxId = parseInt(id.slice(4));

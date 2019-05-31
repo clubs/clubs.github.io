@@ -1,0 +1,852 @@
+{"object_scenes": [
+ {
+   "id": 0,
+   "name": "veet spawax",
+   "category": "personal hygiene",
+   "sub_category": "shaving and hair removal",
+   "sub_sub_category": "wax",
+   "shape": "box",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 1,
+   "name": "color pencils",
+   "category": "office material",
+   "sub_category": "writing",
+   "sub_sub_category": "pencils",
+   "shape": "box",
+   "rigidity": "rigid",
+   "packaging": "transparent"
+ },
+ {
+   "id": 2,
+   "name": "cupholder",
+   "category": "children products",
+   "sub_category": "stroller accessories",
+   "sub_sub_category": "cupholder",
+   "shape": "box",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 3,
+   "name": "underware",
+   "category": "children products",
+   "sub_category": "clothing",
+   "sub_sub_category": "underware",
+   "shape": "box",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 4,
+   "name": "axe",
+   "category": "personal hygiene",
+   "sub_category": "body care",
+   "sub_sub_category": "fragrance",
+   "shape": "box",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 5,
+   "name": "gleitgel",
+   "category": "personal hygiene",
+   "sub_category": "intimate",
+   "sub_sub_category": "lubricant",
+   "shape": "box",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 6,
+   "name": "wellnes book",
+   "category": "media",
+   "sub_category": "book",
+   "sub_sub_category": "voucher",
+   "shape": "box",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 7,
+   "name": "smartbox",
+   "category": "media",
+   "sub_category": "book",
+   "sub_sub_category": "voucher",
+   "shape": "box",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 8,
+   "name": "denim",
+   "category": "personal hygiene",
+   "sub_category": "body care",
+   "sub_sub_category": "after shave",
+   "shape": "box",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 9,
+   "name": "loreal gloss",
+   "category": "personal hygiene",
+   "sub_category": "hair care",
+   "sub_sub_category": "hair colouring",
+   "shape": "box",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 10,
+   "name": "veet creme",
+   "category": "personal hygiene",
+   "sub_category": "shaving and hair removal",
+   "sub_sub_category": "creme",
+   "shape": "box",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 11,
+   "name": "speedo",
+   "category": "children products",
+   "sub_category": "sports",
+   "sub_sub_category": "swimming goggles",
+   "shape": "box",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 12,
+   "name": "dove butter",
+   "category": "personal hygiene",
+   "sub_category": "body care",
+   "sub_sub_category": "soap",
+   "shape": "box",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 13,
+   "name": "sensodyne",
+   "category": "personal hygiene",
+   "sub_category": "oral and dental hygiene ",
+   "sub_sub_category": "toothpaste",
+   "shape": "box",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 14,
+   "name": "picture",
+   "category": "office material",
+   "sub_category": "interior",
+   "sub_sub_category": "decoration",
+   "shape": "box",
+   "rigidity": "rigid",
+   "packaging": "transparent"
+ },
+ {
+   "id": 15,
+   "name": "shoebox",
+   "category": "fashion products",
+   "sub_category": "shoes",
+   "sub_sub_category": "",
+   "shape": "box",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 16,
+   "name": "baby bottle",
+   "category": "children products",
+   "sub_category": "food",
+   "sub_sub_category": "bottles",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 17,
+   "name": "box",
+   "category": "office material",
+   "sub_category": "storage",
+   "sub_sub_category": "box",
+   "shape": "box",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 18,
+   "name": "wrapping tape",
+   "category": "office material",
+   "sub_category": "shipping and packaging",
+   "sub_sub_category": "wrapping",
+   "shape": "cylinder",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 19,
+   "name": "decoration tape",
+   "category": "office material",
+   "sub_category": "shipping and packaging",
+   "sub_sub_category": "wrapping",
+   "shape": "cylinder",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 20,
+   "name": "yellow tape",
+   "category": "office material",
+   "sub_category": "shipping and packaging",
+   "sub_sub_category": "wrapping",
+   "shape": "cylinder",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 21,
+   "name": "envelopes",
+   "category": "office material",
+   "sub_category": "shipping and packaging",
+   "sub_sub_category": "envelopes",
+   "shape": "box",
+   "rigidity": "rigid",
+   "packaging": "transparent"
+ },
+ {
+   "id": 22,
+   "name": "robin mckelle",
+   "category": "media",
+   "sub_category": "CD",
+   "sub_sub_category": "music",
+   "shape": "box",
+   "rigidity": "rigid",
+   "packaging": "transparent"
+ },
+ {
+   "id": 23,
+   "name": "stanley",
+   "category": "media",
+   "sub_category": "CD",
+   "sub_sub_category": "music",
+   "shape": "box",
+   "rigidity": "rigid",
+   "packaging": "transparent"
+ },
+ {
+   "id": 24,
+   "name": "blue",
+   "category": "media",
+   "sub_category": "CD",
+   "sub_sub_category": "music",
+   "shape": "box",
+   "rigidity": "rigid",
+   "packaging": "transparent"
+ },
+ {
+   "id": 25,
+   "name": "best wishes",
+   "category": "office material",
+   "sub_category": "writing",
+   "sub_sub_category": "notes",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "transparent"
+ },
+ {
+   "id": 26,
+   "name": "sauger",
+   "category": "children products",
+   "sub_category": "food",
+   "sub_sub_category": "baby bottle accessories",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 27,
+   "name": "movie",
+   "category": "media",
+   "sub_category": "CD",
+   "sub_sub_category": "movie",
+   "shape": "box",
+   "rigidity": "rigid",
+   "packaging": "transparent"
+ },
+ {
+   "id": 28,
+   "name": "gillette",
+   "category": "personal hygiene",
+   "sub_category": "shaving and hair removal",
+   "sub_sub_category": "razorblades",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 29,
+   "name": "trisa",
+   "category": "personal hygiene",
+   "sub_category": "oral and dental hygiene ",
+   "sub_sub_category": "toothbrush",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 30,
+   "name": "toothbrushes",
+   "category": "personal hygiene",
+   "sub_category": "oral and dental hygiene ",
+   "sub_sub_category": "toothbrush",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 31,
+   "name": "crazy lady",
+   "category": "office material",
+   "sub_category": "writing",
+   "sub_sub_category": "planner",
+   "shape": "box",
+   "rigidity": "rigid",
+   "packaging": "transparent"
+ },
+ {
+   "id": 32,
+   "name": "st tropez",
+   "category": "media",
+   "sub_category": "CD",
+   "sub_sub_category": "music",
+   "shape": "box",
+   "rigidity": "rigid",
+   "packaging": "transparent"
+ },
+ {
+   "id": 33,
+   "name": "rexona",
+   "category": "personal hygiene",
+   "sub_category": "body care",
+   "sub_sub_category": "deodorant",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 34,
+   "name": "guhl",
+   "category": "personal hygiene",
+   "sub_category": "hair care",
+   "sub_sub_category": "shampoo",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 35,
+   "name": "satin care gel",
+   "category": "personal hygiene",
+   "sub_category": "shaving and hair removal",
+   "sub_sub_category": "gel",
+   "shape": "cylinder",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 36,
+   "name": "rexona tropical",
+   "category": "personal hygiene",
+   "sub_category": "body care",
+   "sub_sub_category": "deodorant",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 37,
+   "name": "rexona invisible",
+   "category": "personal hygiene",
+   "sub_category": "body care",
+   "sub_sub_category": "deodorant",
+   "shape": "cylinder",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 38,
+   "name": "syoss",
+   "category": "personal hygiene",
+   "sub_category": "hair care",
+   "sub_sub_category": "hair gel",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 39,
+   "name": "huile",
+   "category": "personal hygiene",
+   "sub_category": "body care",
+   "sub_sub_category": "deodorant",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 40,
+   "name": "borotalco",
+   "category": "personal hygiene",
+   "sub_category": "body care",
+   "sub_sub_category": "deodorant",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 41,
+   "name": "rexona diamond",
+   "category": "personal hygiene",
+   "sub_category": "body care",
+   "sub_sub_category": "deodorant",
+   "shape": "cylinder",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 42,
+   "name": "borotalco original",
+   "category": "personal hygiene",
+   "sub_category": "body care",
+   "sub_sub_category": "deodorant",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 43,
+   "name": "brylcreem",
+   "category": "personal hygiene",
+   "sub_category": "hair care",
+   "sub_sub_category": "hair gel",
+   "shape": "cylinder",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 44,
+   "name": "dove silky",
+   "category": "personal hygiene",
+   "sub_category": "body care",
+   "sub_sub_category": "body lotion",
+   "shape": "cylinder",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 45,
+   "name": "clear scalp",
+   "category": "personal hygiene",
+   "sub_category": "hair care",
+   "sub_sub_category": "hair mask",
+   "shape": "box",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 46,
+   "name": "borotalco invisible",
+   "category": "personal hygiene",
+   "sub_category": "body care",
+   "sub_sub_category": "deodorant",
+   "shape": "cylinder",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 47,
+   "name": "pantene pro shampoo",
+   "category": "personal hygiene",
+   "sub_category": "hair care",
+   "sub_sub_category": "shampoo",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 48,
+   "name": "signal",
+   "category": "personal hygiene",
+   "sub_category": "oral and dental hygiene ",
+   "sub_sub_category": "toothpaste",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 49,
+   "name": "eos balls",
+   "category": "personal hygiene",
+   "sub_category": "face care",
+   "sub_sub_category": "lip balm",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 50,
+   "name": "axe peace",
+   "category": "personal hygiene",
+   "sub_category": "body care",
+   "sub_sub_category": "deodorant",
+   "shape": "cylinder",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 51,
+   "name": "garnier water",
+   "category": "personal hygiene",
+   "sub_category": "face care",
+   "sub_sub_category": "facial cleansers",
+   "shape": "cylinder",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 52,
+   "name": "loreal studio pro",
+   "category": "personal hygiene",
+   "sub_category": "hair care",
+   "sub_sub_category": "hair spray",
+   "shape": "cylinder",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 53,
+   "name": "dove lotion",
+   "category": "personal hygiene",
+   "sub_category": "body care",
+   "sub_sub_category": "body lotion",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 54,
+   "name": "pantene pro",
+   "category": "personal hygiene",
+   "sub_category": "hair care",
+   "sub_sub_category": "shampoo",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 55,
+   "name": "gillette schaum",
+   "category": "personal hygiene",
+   "sub_category": "shaving and hair removal",
+   "sub_sub_category": "foam",
+   "shape": "cylinder",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 56,
+   "name": "satin care",
+   "category": "personal hygiene",
+   "sub_category": "shaving and hair removal",
+   "sub_sub_category": "gel",
+   "shape": "cylinder",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 57,
+   "name": "loreal elseve",
+   "category": "personal hygiene",
+   "sub_category": "hair care",
+   "sub_sub_category": "shampoo",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 58,
+   "name": "garnier sensitive",
+   "category": "personal hygiene",
+   "sub_category": "body care",
+   "sub_sub_category": "sun cream",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 59,
+   "name": "dove men",
+   "category": "personal hygiene",
+   "sub_category": "body care",
+   "sub_sub_category": "shower gel",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 60,
+   "name": "brylcreem strong",
+   "category": "personal hygiene",
+   "sub_category": "hair care",
+   "sub_sub_category": "hair gel",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 61,
+   "name": "baby bottle",
+   "category": "children products",
+   "sub_category": "food",
+   "sub_sub_category": "bottle",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 62,
+   "name": "marseiliais duschgel",
+   "category": "personal hygiene",
+   "sub_category": "body care",
+   "sub_sub_category": "shower gel",
+   "shape": "box",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 63,
+   "name": "head and shoulders",
+   "category": "personal hygiene",
+   "sub_category": "hair care",
+   "sub_sub_category": "shampoo",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 64,
+   "name": "loreal elnett",
+   "category": "personal hygiene",
+   "sub_category": "hair care",
+   "sub_sub_category": "hair spray",
+   "shape": "cylinder",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 65,
+   "name": "duschgel sport",
+   "category": "personal hygiene",
+   "sub_category": "body care",
+   "sub_sub_category": "shower gel",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 66,
+   "name": "earrings",
+   "category": "fashion products",
+   "sub_category": "accessories",
+   "sub_sub_category": "",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 67,
+   "name": "looney toons",
+   "category": "children products",
+   "sub_category": "bathing ",
+   "sub_sub_category": "towel",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "transparent"
+ },
+ {
+   "id": 68,
+   "name": "kugelschreiber",
+   "category": "office material",
+   "sub_category": "writing",
+   "sub_sub_category": "pens",
+   "shape": "cylinder",
+   "rigidity": "rigid",
+   "packaging": "no"
+ },
+ {
+   "id": 69,
+   "name": "wilkinson razors",
+   "category": "personal hygiene",
+   "sub_category": "shaving and hair removal",
+   "sub_sub_category": "razorblades",
+   "shape": "irregular",
+   "rigidity": "deformable",
+   "packaging": "no"
+ },
+ {
+   "id": 70,
+   "name": "socks",
+   "category": "fashion products",
+   "sub_category": "socks",
+   "sub_sub_category": "",
+   "shape": "irregular",
+   "rigidity": "deformable",
+   "packaging": "no"
+ },
+ {
+   "id": 71,
+   "name": "neckerchew",
+   "category": "children products",
+   "sub_category": "clothing",
+   "sub_sub_category": "neckerchew",
+   "shape": "irregular",
+   "rigidity": "deformable",
+   "packaging": "no"
+ },
+ {
+   "id": 72,
+   "name": "hemd",
+   "category": "fashion products",
+   "sub_category": "t-shirt",
+   "sub_sub_category": "",
+   "shape": "irregular",
+   "rigidity": "deformable",
+   "packaging": "transparent"
+ },
+ {
+   "id": 73,
+   "name": "case",
+   "category": "office material",
+   "sub_category": "writing",
+   "sub_sub_category": "pencil case",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "transparent"
+ },
+ {
+   "id": 74,
+   "name": "garnier tucher",
+   "category": "personal hygiene",
+   "sub_category": "face care",
+   "sub_sub_category": "facial cleansers",
+   "shape": "irregular",
+   "rigidity": "deformable",
+   "packaging": "no"
+ },
+ {
+   "id": 75,
+   "name": "tshirt",
+   "category": "fashion products",
+   "sub_category": "t-shirt",
+   "sub_sub_category": "",
+   "shape": "irregular",
+   "rigidity": "deformable",
+   "packaging": "transparent"
+ },
+ {
+   "id": 76,
+   "name": "case pink",
+   "category": "office material",
+   "sub_category": "writing",
+   "sub_sub_category": "pencil case",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "transparent"
+ },
+ {
+   "id": 77,
+   "name": "belt",
+   "category": "fashion products",
+   "sub_category": "belt",
+   "sub_sub_category": "",
+   "shape": "irregular",
+   "rigidity": "rigid",
+   "packaging": "transparent"
+ },
+ {
+   "id": 78,
+   "name": "shirt green",
+   "category": "fashion products",
+   "sub_category": "t-shirt",
+   "sub_sub_category": "",
+   "shape": "irregular",
+   "rigidity": "deformable",
+   "packaging": "transparent"
+ },
+ {
+   "id": 79,
+   "name": "adidas pants",
+   "category": "fashion products",
+   "sub_category": "pants",
+   "sub_sub_category": "",
+   "shape": "irregular",
+   "rigidity": "deformable",
+   "packaging": "transparent"
+ },
+ {
+   "id": 80,
+   "name": "sea squad",
+   "category": "children products",
+   "sub_category": "bathing ",
+   "sub_sub_category": "toy",
+   "shape": "irregular",
+   "rigidity": "deformable",
+   "packaging": "no"
+ },
+ {
+   "id": 81,
+   "name": "jeans",
+   "category": "fashion products",
+   "sub_category": "pants",
+   "sub_sub_category": "",
+   "shape": "irregular",
+   "rigidity": "deformable",
+   "packaging": "no"
+ },
+ {
+   "id": 82,
+   "name": "teddybear",
+   "category": "children products",
+   "sub_category": "sleeping",
+   "sub_sub_category": "blanket",
+   "shape": "irregular",
+   "rigidity": "deformable",
+   "packaging": "transparent"
+ },
+ {
+   "id": 83,
+   "name": "shirt",
+   "category": "fashion products",
+   "sub_category": "shirt",
+   "sub_sub_category": "",
+   "shape": "irregular",
+   "rigidity": "deformable",
+   "packaging": "transparent"
+ },
+ {
+   "id": 84,
+   "name": "slippers",
+   "category": "fashion products",
+   "sub_category": "shoes",
+   "sub_sub_category": "",
+   "shape": "irregular",
+   "rigidity": "deformable",
+   "packaging": "transparent"
+ }
+]}

@@ -1,186 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <title>CLUBS Dataset</title>
+  <title>CLUBS Dataset</title>
 
-    <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/one-page-wonder.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/one-page-wonder.css" rel="stylesheet">
 
-    <script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="https://clubs.github.io/img/ethz_logo_white.svg">
+        <!-- <img src="img/asl_logo_right_negative.png" > -->
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#publication">Publication</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#download">Download</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tools">Tools</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="masthead text-center">
+    <div class="masthead-content">
       <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="https://clubs.github.io/img/ethz_logo_white.svg" >
-          <!-- <img src="img/asl_logo_right_negative.png" > -->
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#publication">Publication</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#download">Download</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#tools">Tools</a>
-            </li>
-          </ul>
+        <h1 class="masthead-heading mb-0">CLUBS</h1>
+        <h2 class="masthead-subheading mb-0">An RGB-D Dataset with Cluttered Box Scenes Containing Household Objects</h2>
+        <p class="masthead-authors mb-0">Tonci Novkovic, Fadri Furrer, Marko Panjek, Margarita Grinvald, Roland Siegwart, and Juan Nieto</p>
+        <p class="mb-0">Autonomous Systems Lab, ETH Zurich, Switzerland</p>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="row center-block">
+        <div class="col mb-1 p-1" id="box_000" onclick="popup(this.id)">
+          <img class="img-fluid img-thumbnail" id="thumbnail_box_000" src="gif/box_000.gif" alt="">
+        </div>
+        <div class="col mb-1 p-1" id="box_001" onclick="popup(this.id)">
+          <img class="img-fluid img-thumbnail" id="thumbnail_box_001" src="gif/box_001.gif" alt="">
+        </div>
+        <div class="col mb-1 p-1" id="box_002" onclick="popup(this.id)">
+          <img class="img-fluid img-thumbnail" id="thumbnail_box_002" src="gif/box_002.gif" alt="">
+        </div>
+        <div class="col mb-1 p-1" id="box_003" onclick="popup(this.id)">
+          <img class="img-fluid img-thumbnail" id="thumbnail_box_003" src="gif/box_003.gif" alt="">
+        </div>
+        <div class="col mb-1 p-1" id="box_004" onclick="popup(this.id)">
+          <img class="img-fluid img-thumbnail" id="thumbnail_box_004" src="gif/box_004.gif" alt="">
         </div>
       </div>
-    </nav>
-
-    <header class="masthead text-center">
-      <div class="masthead-content">
-        <div class="container">
-          <h1 class="masthead-heading mb-0">CLUBS</h1>
-          <h2 class="masthead-subheading mb-0">An RGB-D Dataset with Cluttered Box Scenes Containing Household Objects</h2>
-          <p class="masthead-authors mb-0">Tonci Novkovic, Fadri Furrer, Marko Panjek, Margarita Grinvald, Roland Siegwart, and Juan Nieto</p>
-          <p class="mb-0">Autonomous Systems Lab, ETH Zurich, Switzerland</p>
+      <div class="row center-block">
+        <div class="col mb-1 p-1" id="box_005" onclick="popup(this.id)">
+          <img class="img-fluid img-thumbnail" id="thumbnail_box_005" src="gif/box_005.gif" alt="">
+        </div>
+        <div class="col mb-1 p-1" id="box_006" onclick="popup(this.id)">
+          <img class="img-fluid img-thumbnail" id="thumbnail_box_006" src="gif/box_006.gif" alt="">
+        </div>
+        <div class="col mb-1 p-1" id="box_007" onclick="popup(this.id)">
+          <img class="img-fluid img-thumbnail" id="thumbnail_box_007" src="gif/box_007.gif" alt="">
+        </div>
+        <div class="col mb-1 p-1" id="box_008" onclick="popup(this.id)">
+          <img class="img-fluid img-thumbnail" id="thumbnail_box_008" src="gif/box_008.gif" alt="">
+        </div>
+        <div class="col mb-1 p-1" id="box_009" onclick="popup(this.id)">
+          <img class="img-fluid img-thumbnail" id="thumbnail_box_009" src="gif/box_009.gif" alt="">
         </div>
       </div>
-    </header>
-
-    <section>
-      <div class="container">
-        <div class="row center-block">
-          <div class="col mb-1 p-1" id="box_000" onclick="popup(this.id)">
-            <img class="img-fluid img-thumbnail" id="thumbnail_box_000" src="gif/box_000.gif" alt="">
-          </div>
-          <div class="col mb-1 p-1" id="box_001" onclick="popup(this.id)">
-            <img class="img-fluid img-thumbnail" id="thumbnail_box_001" src="gif/box_001.gif" alt="">
-          </div>
-          <div class="col mb-1 p-1" id="box_002" onclick="popup(this.id)">
-            <img class="img-fluid img-thumbnail" id="thumbnail_box_002" src="gif/box_002.gif" alt="">
-          </div>
-          <div class="col mb-1 p-1" id="box_003" onclick="popup(this.id)">
-            <img class="img-fluid img-thumbnail" id="thumbnail_box_003" src="gif/box_003.gif" alt="">
-          </div>
-          <div class="col mb-1 p-1" id="box_004" onclick="popup(this.id)">
-            <img class="img-fluid img-thumbnail" id="thumbnail_box_004" src="gif/box_004.gif" alt="">
-          </div>
+      <div class="row center-block">
+        <div class="col mb-1 p-1" id="box_010" onclick="popup(this.id)">
+          <img class="img-fluid img-thumbnail" id="thumbnail_box_010" src="gif/box_010.gif" alt="">
         </div>
-        <div class="row center-block">
-          <div class="col mb-1 p-1" id="box_005" onclick="popup(this.id)">
-            <img class="img-fluid img-thumbnail" id="thumbnail_box_005" src="gif/box_005.gif" alt="">
-          </div>
-          <div class="col mb-1 p-1" id="box_006" onclick="popup(this.id)">
-            <img class="img-fluid img-thumbnail" id="thumbnail_box_006" src="gif/box_006.gif" alt="">
-          </div>
-          <div class="col mb-1 p-1" id="box_007" onclick="popup(this.id)">
-            <img class="img-fluid img-thumbnail" id="thumbnail_box_007" src="gif/box_007.gif" alt="">
-          </div>
-          <div class="col mb-1 p-1" id="box_008" onclick="popup(this.id)">
-            <img class="img-fluid img-thumbnail" id="thumbnail_box_008" src="gif/box_008.gif" alt="">
-          </div>
-          <div class="col mb-1 p-1" id="box_009" onclick="popup(this.id)">
-            <img class="img-fluid img-thumbnail" id="thumbnail_box_009" src="gif/box_009.gif" alt="">
-          </div>
+        <div class="col mb-1 p-1" id="box_011" onclick="popup(this.id)">
+          <img class="img-fluid img-thumbnail" id="thumbnail_box_011" src="gif/box_011.gif" alt="">
         </div>
-        <div class="row center-block">
-          <div class="col mb-1 p-1" id="box_010" onclick="popup(this.id)">
-            <img class="img-fluid img-thumbnail" id="thumbnail_box_010" src="gif/box_010.gif" alt="">
-          </div>
-          <div class="col mb-1 p-1" id="box_011" onclick="popup(this.id)">
-            <img class="img-fluid img-thumbnail" id="thumbnail_box_011" src="gif/box_011.gif" alt="">
-          </div>
-          <div class="col mb-1 p-1" id="box_012" onclick="popup(this.id)">
-            <img class="img-fluid img-thumbnail" id="thumbnail_box_012" src="gif/box_012.gif" alt="">
-          </div>
-          <div class="col mb-1 p-1" id="box_013" onclick="popup(this.id)">
-            <img class="img-fluid img-thumbnail" id="thumbnail_box_013" src="gif/box_013.gif" alt="">
-          </div>
-          <div class="col mb-1 p-1" id="box_014" onclick="popup(this.id)">
-            <img class="img-fluid img-thumbnail" id="thumbnail_box_014" src="gif/box_014.gif" alt="">
-          </div>
+        <div class="col mb-1 p-1" id="box_012" onclick="popup(this.id)">
+          <img class="img-fluid img-thumbnail" id="thumbnail_box_012" src="gif/box_012.gif" alt="">
         </div>
-        <div class="row center-block">
-          <div class="col mb-1 p-1" id="box_015" onclick="popup(this.id)">
-            <img class="img-fluid img-thumbnail" id="thumbnail_box_015" src="gif/box_015.gif" alt="">
-          </div>
-          <div class="col mb-1 p-1" id="box_016" onclick="popup(this.id)">
-            <img class="img-fluid img-thumbnail" id="thumbnail_box_016" src="gif/box_016.gif" alt="">
-          </div>
-          <div class="col mb-1 p-1" id="box_017" onclick="popup(this.id)">
-            <img class="img-fluid img-thumbnail" id="thumbnail_box_017" src="gif/box_017.gif" alt="">
-          </div>
-          <div class="col mb-1 p-1" id="box_018" onclick="popup(this.id)">
-            <img class="img-fluid img-thumbnail" id="thumbnail_box_018" src="gif/box_018.gif" alt="">
-          </div>
-          <div class="col mb-1 p-1" id="box_019" onclick="popup(this.id)">
-            <img class="img-fluid img-thumbnail" id="thumbnail_box_019" src="gif/box_019.gif" alt="">
-          </div>
+        <div class="col mb-1 p-1" id="box_013" onclick="popup(this.id)">
+          <img class="img-fluid img-thumbnail" id="thumbnail_box_013" src="gif/box_013.gif" alt="">
         </div>
-        <div class="row center-block">
-          <div class="col mb-1 p-1" id="box_020" onclick="popup(this.id)">
-            <img class="img-fluid img-thumbnail" id="thumbnail_box_020" src="gif/box_020.gif" alt="">
-          </div>
-          <div class="col mb-1 p-1" id="box_021" onclick="popup(this.id)">
-            <img class="img-fluid img-thumbnail" id="thumbnail_box_021" src="gif/box_021.gif" alt="">
-          </div>
-          <div class="col mb-1 p-1" id="box_022" onclick="popup(this.id)">
-            <img class="img-fluid img-thumbnail" id="thumbnail_box_022" src="gif/box_022.gif" alt="">
-          </div>
-          <div class="col mb-1 p-1" id="box_023" onclick="popup(this.id)">
-            <img class="img-fluid img-thumbnail" id="thumbnail_box_023" src="gif/box_023.gif" alt="">
-          </div>
-          <div class="col mb-1 p-1" id="box_024" onclick="popup(this.id)">
-            <img class="img-fluid img-thumbnail" id="thumbnail_box_024" src="gif/box_024.gif" alt="">
-          </div>
-          <!-- Box Modal -->
-          <div class="modal fade" id="boxPopup" tabindex="-1" role="dialog" aria-labelledby="boxPopupTitle" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="boxPopupTitle">Box Objects</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body container" id="boxPopupBody">
-                  ...
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
+        <div class="col mb-1 p-1" id="box_014" onclick="popup(this.id)">
+          <img class="img-fluid img-thumbnail" id="thumbnail_box_014" src="gif/box_014.gif" alt="">
+        </div>
+      </div>
+      <div class="row center-block">
+        <div class="col mb-1 p-1" id="box_015" onclick="popup(this.id)">
+          <img class="img-fluid img-thumbnail" id="thumbnail_box_015" src="gif/box_015.gif" alt="">
+        </div>
+        <div class="col mb-1 p-1" id="box_016" onclick="popup(this.id)">
+          <img class="img-fluid img-thumbnail" id="thumbnail_box_016" src="gif/box_016.gif" alt="">
+        </div>
+        <div class="col mb-1 p-1" id="box_017" onclick="popup(this.id)">
+          <img class="img-fluid img-thumbnail" id="thumbnail_box_017" src="gif/box_017.gif" alt="">
+        </div>
+        <div class="col mb-1 p-1" id="box_018" onclick="popup(this.id)">
+          <img class="img-fluid img-thumbnail" id="thumbnail_box_018" src="gif/box_018.gif" alt="">
+        </div>
+        <div class="col mb-1 p-1" id="box_019" onclick="popup(this.id)">
+          <img class="img-fluid img-thumbnail" id="thumbnail_box_019" src="gif/box_019.gif" alt="">
+        </div>
+      </div>
+      <div class="row center-block">
+        <div class="col mb-1 p-1" id="box_020" onclick="popup(this.id)">
+          <img class="img-fluid img-thumbnail" id="thumbnail_box_020" src="gif/box_020.gif" alt="">
+        </div>
+        <div class="col mb-1 p-1" id="box_021" onclick="popup(this.id)">
+          <img class="img-fluid img-thumbnail" id="thumbnail_box_021" src="gif/box_021.gif" alt="">
+        </div>
+        <div class="col mb-1 p-1" id="box_022" onclick="popup(this.id)">
+          <img class="img-fluid img-thumbnail" id="thumbnail_box_022" src="gif/box_022.gif" alt="">
+        </div>
+        <div class="col mb-1 p-1" id="box_023" onclick="popup(this.id)">
+          <img class="img-fluid img-thumbnail" id="thumbnail_box_023" src="gif/box_023.gif" alt="">
+        </div>
+        <div class="col mb-1 p-1" id="box_024" onclick="popup(this.id)">
+          <img class="img-fluid img-thumbnail" id="thumbnail_box_024" src="gif/box_024.gif" alt="">
+        </div>
+        <!-- Box Modal -->
+        <div class="modal fade" id="boxPopup" tabindex="-1" role="dialog" aria-labelledby="boxPopupTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="boxPopupTitle">Box Objects</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body container" id="boxPopupBody">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <section>
-      <div class="container" id="publication">
-        <div class="row align-items-center">
-          <div class="col-lg-12 order-lg-1">
-            <div class="p-4">
-              <p><b>PUBLICATION:</b>
-                <br>This is an official webpage of the CLUBS dataset. You can see an overview of the box scenes above. More information is available upon clicking on the interested gif. If you are using this dataset please cite the following publication: </p>
-<pre><code>@inproceedings{to_appear,
+    </div>
+  </section>
+  <section>
+    <div class="container" id="publication">
+      <div class="row align-items-center">
+        <div class="col-lg-12 order-lg-1">
+          <div class="p-4">
+            <p><b>PUBLICATION:</b>
+              <br>This is an official webpage of the CLUBS dataset. You can see an overview of the box scenes above. More information is available upon clicking on the interested gif. If you are using this dataset please cite the following
+              publication: </p>
+            <pre><code>@inproceedings{to_appear,
     title={CLUBS - An RGB-D Dataset with Cluttered Box Scenes Containing Household Objects},
     author={Novkovic, Tonci and Furrer, Fadri and Panjek, Marko and Grinvald, Margarita and Siegwart, Roland and Nieto, Juan},
     booktitle = {to_appear},
@@ -195,14 +196,14 @@
       <div class="row align-items-center">
         <div class="col-lg-12">
           <div class="p-4">
-          <p><b>DOWNLOAD:</b>
-            <br>The whole dataset can be downloaded from the following links:
-            <ul class="list-unstyled">
-              <li><a href="http://robotics.ethz.ch/~asl-datasets/2018_CLUBS_Dataset/CLUBS_dataset_sample_data_small.zip">Sample Data</a></li>
-              <li><a href="#">Object Scenes (Coming soon)</a></li>
-              <li><a href="#">Box Scenes (Coming soon)</a></li>
-            </ul>
-          </p>
+            <p><b>DOWNLOAD:</b>
+              <br>The whole dataset can be downloaded from the following links:
+              <ul class="list-unstyled">
+                <li><a href="http://robotics.ethz.ch/~asl-datasets/2018_CLUBS_Dataset/CLUBS_dataset_sample_data_small.zip">Sample Data</a></li>
+                <li><a href="#">Object Scenes (Coming soon)</a></li>
+                <li><a href="#">Box Scenes (Coming soon)</a></li>
+              </ul>
+            </p>
           </div>
         </div>
       </div>
@@ -212,41 +213,41 @@
       <div class="row align-items-center">
         <div class="col-lg-12">
           <div class="p-4">
-              <p><b>TOOLS:</b>
-                <br>This dataset comes with a set of tools which are avilable on our repo: <br>
-                <a href="https://github.com/ethz-asl/clubs_dataset_tools">clubs_dataset_tools</a>
-                <br><br>
-                These tools include:
-                <ul style="list-style-type:circle">
-                  <li>Download script for different parts of the dataset</li>
-                  <li>Script for computing depth images from an IR stereo pair</li>
-                  <li>Script for generating point clouds</li>
-                  <li>Script for registering depth images to corresponding RGB images</li>
-                  <li>Script for displaying label images in color</li>
-                  <li>Camera calibration script</li>
-                </ul>
-              </p>
-            </div>
+            <p><b>TOOLS:</b>
+              <br>This dataset comes with a set of tools which are avilable on our repo: <br>
+              <a href="https://github.com/ethz-asl/clubs_dataset_tools">clubs_dataset_tools</a>
+              <br><br>
+              These tools include:
+              <ul style="list-style-type:circle">
+                <li>Download script for different parts of the dataset</li>
+                <li>Script for computing depth images from an IR stereo pair</li>
+                <li>Script for generating point clouds</li>
+                <li>Script for registering depth images to corresponding RGB images</li>
+                <li>Script for displaying label images in color</li>
+                <li>Camera calibration script</li>
+              </ul>
+            </p>
           </div>
         </div>
       </div>
+    </div>
 
-    </section>
+  </section>
 
 
 
-    <!-- Footer -->
-    <footer class="py-5 bg-black">
-      <div class="container">
-        <p class="m-0 text-center text-white small">Copyright &copy; CLUBS 2018</p>
-      </div>
-      <!-- /.container -->
-    </footer>
+  <!-- Footer -->
+  <footer class="py-5 bg-black">
+    <div class="container">
+      <p class="m-0 text-center text-white small">Copyright &copy; CLUBS 2018</p>
+    </div>
+    <!-- /.container -->
+  </footer>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  </body>
+</body>
 
 </html>

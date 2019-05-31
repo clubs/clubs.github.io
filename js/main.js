@@ -1,65 +1,64 @@
 $(document).ready(function() {
   $('.test, .nav-link, .navbar-brand, .new-button').click(function() {
     var sectionTo = $(this).attr('href');
-    $('html, body').animate({
-      scrollTop: $(sectionTo).offset().top - 90
-    }, 700);
+    $('html, body').animate({scrollTop: $(sectionTo).offset().top - 90}, 700);
   });
 
   $('.box').each(function() {
     $(this).append($(this).attr('id'));
   });
-
 });
 
 
 function object(id, src) {
-    this.id = id;
-    this.src = src;
+  this.id = id;
+  this.src = src;
 }
 
 var objects;
 var boxes;
 
 $.getJSON('data/boxes.json', function(data) {
-    //data is the JSON string
-    boxes = data.boxes;
+  // data is the JSON string
+  boxes = data.boxes;
 });
 
 $.getJSON('data/objects.json', function(data) {
-    //data is the JSON string
-    objects = data.objects;
+  // data is the JSON string
+  objects = data.objects;
 });
 
 function popup(id) {
   boxId = parseInt(id.slice(4));
-  var boxHtml = buildBoxHtml(boxId)
+  var boxHtml = buildBoxHtml(boxId);
   $('#boxPopupBody').html(boxHtml);
   $('#boxPopupTitle').html('Box ' + boxId);
   $('#boxPopup').modal();
 }
 
-function removeDuplicates(arr){
-    let unique_array = []
-    for(let i = 0;i < arr.length; i++){
-        if(unique_array.indexOf(arr[i]) == -1){
-            unique_array.push(arr[i])
-        } else {
-          console.log("Duplicate object in box : " + arr[i])
-        }
+function removeDuplicates(arr) {
+  let unique_array = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (unique_array.indexOf(arr[i]) == -1) {
+      unique_array.push(arr[i]);
+    } else {
+      console.log('Duplicate object in box : ' + arr[i]);
     }
-    return unique_array
+  }
+  return unique_array;
 }
 
 function buildBoxHtml(boxId) {
-  var html = '<div class="row">'
-  html += '<div class="col-auto pl-5"><center><img class="img-fluid" src="gif/box_' + boxId.toString().padStart(3, '0') + '.gif" alt=""></center></div>';
-  html += '<div class="col px-5"><div class="row">'
+  var html = '<div class="row">';
+  html +=
+      '<div class="col-auto pl-5"><center><img class="img-fluid" src="gif/box_' +
+      boxId.toString().padStart(3, '0') + '.gif" alt=""></center></div>';
+  html += '<div class="col px-5"><div class="row">';
 
   boxObjects = boxes[boxId].objects;
-  boxObjects = removeDuplicates(boxObjects)
+  boxObjects = removeDuplicates(boxObjects);
   boxObjects.forEach((objectId, index) => {
-    html += buildObjectHtml(objectId)
+    html += buildObjectHtml(objectId);
   });
 
   html += '</div></div></div>';
@@ -68,6 +67,9 @@ function buildBoxHtml(boxId) {
 
 function buildObjectHtml(objectId) {
   id = objects[objectId].filename.slice(1, 3);
-  var html = '<div class="col-2 px-2 pb-2"><img  class="img-fluid img-fluid" src="img/objects/' + objects[objectId].filename + '"><span><center>' + id + '</center></span></div>';
-  return html
+  var html =
+      '<div class="col-2 px-2 pb-2"><img  class="img-fluid img-fluid" src="img/objects/' +
+      objects[objectId].filename + '"><span><center>' + id +
+      '</center></span></div>';
+  return html;
 }

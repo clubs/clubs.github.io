@@ -279,11 +279,21 @@
               For the RealSense cameras, two different calibration files are provided, one containing depth intrinsic parameters read out from the device itself for the lower resolution depth <i>*_device_depth.yaml</i>, and the other containing
               higher-resolution depth intrinsic parameters obtained in the calibration step <i>*_stereo_depth.yaml</i>. If regular depth from the raw data is used, the former one should be used. In case the depth is generated from stereo using our
               Python script the latter calibration file should be used. The calibration folder is provided as:
-              <center>
-              <div class="col mb-1 p-1">
-                <img class="img-fluid" style="padding-left:25%; padding-right:25%" id="calib_folder" src="img/calibration_folder.png" alt="">
-              </div>
-              </center>
+              <code>
+              <ul style="list-style-type:none;" id="directory-list">
+                <li>- calibration
+                <ul style="list-style-type:none;">
+                    <li>- primesense.yaml</li>
+                    <li>- realsense_d415_device_depth.yaml</li>
+                    <li>- realsense_d415_stereo_depth.yaml</li>
+                    <li>- realsense_d435_device_depth.yaml</li>
+                    <li>- realsense_d435_stereo_depth.yaml</li>
+                    <li>- chameleon3.yaml</li>
+                    <li>- calibration_raw_data</li>
+                </ul>
+                </li>
+              </ul>
+              </code>
               MATLAB script for obtaining the calibration parameters is available on the CLUBS tools github page.
             </p>
             <p>
@@ -299,31 +309,71 @@
               <br><br>TODO csv format<br><br> All the poses are stored using the quaternion and translation format as described above. The robot's end-effector poses are stored in <i>W_H_poses.csv</i>, and for each sensor, the poses of the RGB
               camera and the IR cameras are stored in <i>W_RGB_poses.csv</i>, <i>W_IR1_poses.csv</i> and <i>W_IR2_poses.csv</i> respectively. The folder
               structure is as follows:
-              <center>
-              <div class="col mb-1 p-1">
-                <img class="img-fluid" style="padding-left:25%; padding-right:25%" id="folder_structure" src="img/folder_structure.png" alt="">
-              </div>
-              </center>
+              <code>
+              <ul style="list-style-type:none;" id="directory-list">
+                <li>- scene
+                <ul style="list-style-type:none;">
+                    <li>- scene_objects.csv</li>
+                    <li>- W_H_poses.csv</li>
+                    <li>- sensor
+                        <ul style="list-style-type:none;">
+                            <li>- W_RGB_poses.csv</li>
+                            <li>- W_IR1_poses.csv</li>
+                            <li>- W_IR2_poses.csv</li>
+                            <li>- depth_images
+                                <ul style="list-style-type:none;">
+                                  <li>- <i>stamp</i>_depth.png</li>
+                                </ul>
+                            </li>
+                            <li>- ir1_images
+                                <ul style="list-style-type:none;">
+                                  <li>- <i>stamp</i>_ir1.png</li>
+                                </ul>
+                            </li>
+                            <li>- ir2_images
+                                <ul style="list-style-type:none;">
+                                  <li>- <i>stamp</i>_ir2.png</li>
+                                </ul>
+                            </li>
+                            <li>- rgb_images
+                                <ul style="list-style-type:none;">
+                                  <li>- <i>stamp</i>_rgb.png</li>
+                                </ul>
+                            </li>
+                            <li>- labels
+                                <ul style="list-style-type:none;">
+                                  <li>- rgb_images
+                                    <ul style="list-style-type:none;">
+                                      <li>- <i>stamp</i>_rgb_label.json</li>
+                                      <li>- <i>stamp</i>_rgb_label.png</li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                            </li>
+                            <li>- <i>scene</i>_<i>sensor</i>_pointlcoud.ply
+                        </ul>
+                    </li>
+                </ul>
+                </li>
+              </ul>
+              </code>
+
               For each sensor in one scene, we provide the reconstructed point cloud <i>scene_sensor_pointcloud.ply</i> obtained by integrating the point clouds with their corresponding camera poses into TSDF volume. The pixel-wise labels and 2D
               bounding boxes are stored in json files <i>timestamp_rgb_label.json</i> as follows:
-              <center>
               <div>
-                <div style="background: #ffffff; padding-top: 2%; margin-left: -50%;"><pre style="margin: 0; line-height: 125%">
-{<span style="color: #aa5500">&quot;poly&quot;</span>:
-                            [[[<span style="color: #aa0000">x00</span>, <span style="color: #aa0000">y00</span>], <span style="color: #aa0000">...</span>, [<span style="color: #aa0000">x0L</span>, <span style="color: #aa0000">y0L</span>]],
-                             <span style="color: #aa0000">...</span>,
-                              [[<span style="color: #aa0000">xN0</span>, <span style="color: #aa0000">yN0</span>], <span style="color: #aa0000">...</span>, [<span style="color: #aa0000">xNL</span>, <span style="color: #aa0000">yNL</span>]]],
- <span style="color: #aa5500">&quot;bbox&quot;</span>:
-                  [[<span style="color: #aa0000">bx0</span>, <span style="color: #aa0000">by0</span>, <span style="color: #aa0000">w0</span>, <span style="color: #aa0000">h0</span>],
-                   <span style="color: #aa0000">...</span>,
-                    [<span style="color: #aa0000">bxN</span>, <span style="color: #aa0000">byN</span>, <span style="color: #aa0000">wN</span>, <span style="color: #aa0000">hN</span>]],
-  <span style="color: #aa5500">&quot;labels&quot;</span>:
-        [<span style="color: #aa5500">&quot;label0&quot;</span>,
-         <span style="color: #aa0000">...</span>,
-          <span style="color: #aa5500">&quot;labelN&quot;</span>]}
-                </pre></div>
+                <pre><code class="language-json">{"poly":
+        [[[x00, y00], ..., [x0L, y0L]],
+         ...,
+         [[xN0, yN0], ..., [xNL, yNL]]],
+ "bbox":
+        [[bx0, by0, w0, h0],
+         ...,
+         [bxN, byN, wN, hN]],
+ "labels":
+        ["label0",
+         ...,
+         "labelN"]}</code></pre>
               </div>
-              </center>
               where <i>poly</i> is a list of lists of image coordinates that define the surrounding polygon, <i>bbox</i> is a list of lists that contain 2D bounding box coordinates of the top left corner, width and height, and <i>labels</i> is a
               list of label names corresponding to the names of objects in the dataset. These json files are used to generate the label images <i>timestamp_rgb_label.png</i>. All the pixels in these images have values from 0 to 41, where 0
               corresponds to the background, and rest of the values correspond to the labels in the json file, i.e. value 1 means it is the first label in the json file, label 2 is the second, etc.
@@ -413,6 +463,10 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- <script src="https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+json"></script> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
+  <script src="vendor/prism.js"></script>
 
 </body>
 

@@ -139,3 +139,19 @@ header.masthead .masthead-content .masthead-authors {
   padding-right: 10%;
   padding-left: 10%;
 }
+
+#directory-list {
+    width:100%;
+    background-color: #f5f2f0;
+    color: #000000;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#directory-list li {
+    font-size:95%;
+}
+
+#directory-list li ul li {
+    font-size:90%;
+}

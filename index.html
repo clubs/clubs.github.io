@@ -66,43 +66,70 @@
         <p class="mb-0">Autonomous Systems Lab, ETH Zurich, Switzerland</p>
       </div>
     </div>
+    <div class="col mb-1 p-1">
+      <img class="img-fluid" style="padding-top:2%; padding-left:20%; padding-right:20%" id="teaser" src="img/blending.png" alt="">
+    </div>
   </header>
 
   <section>
     <div class="container" id="dataset">
       <div class="row align-items-center">
         <div class="col-lg-12 order-lg-1">
-          <div class="p-4">
+          <div class="p-4 text-justify">
             <p><b>DATASET:</b>
-              <br>This is an official webpage of the CLUBS dataset. </p>
+              <br>CLUBS is an RGB-D dataset that can be used for segmentation, classification and detetion of household objects in realistic warehouse box scenarios. The dataset contains the object scenes, the reconstructed models, as well as box
+              scenes that contain mutliple objects packed in different configurations. Additionally, the raw scaning data, 2D object bounding boxes and pixel-wise labels in RGB images, and calibration data are also available.
+              <br>The dataset contains 85 object scenes and 25 box scenes. Different box scenes have diffrent configurations of objects in them and vary in clutter level. More details about the specific box scenes can be found by clicking on the
+              scene gif image below.
+              <br>The data was collected using a robotic arm (UR10) with one RGB (Chameleon3) and three RGB-D (PrimeSense Carmine 1.09, Intel Realsense D415, Intel Realsense D435) cameras. All the cameras were calibrated for intrisic and extrinsic
+              parameters. More details can be found below.
+            </p>
             <p>
               <b>Object scenes</b>
-              <br>The dataset contains 85 different objects.
+              <br>The dataset contains 85 different objects. The path for scanning a single object scene contains 19 different poses at three different height levels. It covers the whole object from every side, except the bottom. Every object was,
+              therefore, rotated and scanned a second time to also cover the bottom face. Some object scene examples:
               <div class="container">
                 <div class="row center-block">
                   <div class="col mb-1 p-1" id="cupholder">
-                    <img class="img-fluid img-thumbnail" id="thumbnail_box_000" src="gif/cupholder.gif" alt="">
+                    <img class="img-fluid img-thumbnail" id="thumbnail_obj_000" src="gif/cupholder.gif" alt="">
                   </div>
                   <div class="col mb-1 p-1" id="garnier">
-                    <img class="img-fluid img-thumbnail" id="thumbnail_box_001" src="gif/garnier.gif" alt="">
+                    <img class="img-fluid img-thumbnail" id="thumbnail_obj_001" src="gif/garnier.gif" alt="">
                   </div>
                   <div class="col mb-1 p-1" id="loreal">
-                    <img class="img-fluid img-thumbnail" id="thumbnail_box_002" src="gif/loreal.gif" alt="">
+                    <img class="img-fluid img-thumbnail" id="thumbnail_obj_002" src="gif/loreal.gif" alt="">
                   </div>
                   <div class="col mb-1 p-1" id="marseiliais">
-                    <img class="img-fluid img-thumbnail" id="thumbnail_box_003" src="gif/marseiliais.gif" alt="">
+                    <img class="img-fluid img-thumbnail" id="thumbnail_obj_003" src="gif/marseiliais.gif" alt="">
                   </div>
                   <div class="col mb-1 p-1" id="veet">
-                    <img class="img-fluid img-thumbnail" id="thumbnail_box_004" src="gif/veet.gif" alt="">
+                    <img class="img-fluid img-thumbnail" id="thumbnail_obj_004" src="gif/veet.gif" alt="">
                   </div>
                 </div>
               </div>
-
-              <p> More details about object scenes and their individual download links can be found on the following page:<br>
-                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal" onclick="popupObjectList()">
-                  <b>Full object list</b>
-                </button>
-              </p>
+              <br>The objects within the dataset are separated into 5 main categories by the type of the product, 3 categories based on shape, and 2 categories based on rigidity:
+              <div class="row center-block">
+                <div class="col mb-1 p-1" id="object_scene_category">
+                  <div>
+                    <img class="img-fluid" src="img/plots/object_category.png" alt="">
+                  </div>
+                </div>
+                <div class="col mb-1 p-1" id="object_scene_category">
+                  <div>
+                    <img class="img-fluid" src="img/plots/object_rigidity.png" alt="">
+                  </div>
+                </div>
+                <div class="col mb-1 p-1" id="object_scene_category">
+                  <div>
+                    <img class="img-fluid" src="img/plots/object_shape.png" alt="">
+                  </div>
+                </div>
+              </div>
+              More details about object scenes and their individual download links can be found here:<br><br>
+              <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal" onclick="popupObjectList()">
+                <b>Full object list</b>
+              </button>
+              <br><br>
 
               <!-- Modal -->
               <div class="modal fade" id="objectListModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -126,6 +153,12 @@
             </p>
             <p>
               <b>Box scenes</b>
+              <br>The robot path for box scenes is shorter and contains 9 poses. These poses were chosen such that the inside of a box of size 58x38x34 cm is covered from all sides including a top-view. The dataset contains 25 different box scenes,
+              where 5 of them have 40 objects and rest 30 objects. Overal object distribution within the boxes is shown below:
+              <div class="col mb-1 p-1">
+                <img class="img-fluid" id="combined" src="img/plots/combined.png" alt="">
+              </div>
+              To get more details about a specific box click on its image below:
               <div class="container">
                 <div class="row center-block">
                   <div class="col mb-1 p-1" id="box_000" onclick="popup(this.id)">
@@ -235,7 +268,72 @@
             </p>
             <p>
               <b>Calibration</b>
+              <br>All the raw calibration data and results are available for download below. For the distortion, radial-tangential model was used, represented as:
+              <center><img src="http://latex.codecogs.com/svg.latex?[r_1, r_2, t_1, t_2, r_3]" border="0" /></center><br>
+              All the frames and transformations between the cameras and the robot are displayed in the image below:
+              <center>
+              <div class="col mb-1 p-1">
+                <img class="img-fluid" style="padding-top:2%; padding-left:20%; padding-right:20%" id="frames" src="img/frames_and_transformations.png" alt="">
+              </div>
+              </center>
+              For the RealSense cameras, two different calibration files are provided, one containing depth intrinsic parameters read out from the device itself for the lower resolution depth <i>*_device_depth.yaml</i>, and the other containing
+              higher-resolution depth intrinsic parameters obtained in the calibration step <i>*_stereo_depth.yaml</i>. If regular depth from the raw data is used, the former one should be used. In case the depth is generated from stereo using our
+              Python script the latter calibration file should be used. The calibration folder is provided as:
+              <center>
+              <div class="col mb-1 p-1">
+                <img class="img-fluid" style="padding-left:25%; padding-right:25%" id="calib_folder" src="img/calibration_folder.png" alt="">
+              </div>
+              </center>
+              MATLAB script for obtaining the calibration parameters is available on the CLUBS tools github page.
             </p>
+            <p>
+              <b>Notation and data structure</b>
+              <br>Camera poses are represented by a translation vector and a Hamiltonian unit quaternion:
+              <center><img src="http://latex.codecogs.com/svg.latex?[stamp, t_x, t_y, t_z, q_x, q_y, q_z, q_w]" border="0" /></center><br>
+              Scenes contain either 9 or 19 poses depending on the type of scene being scanned (object or box scene). Object scenes are labeled as: <i>label_side_name</i>, where <i>label</i> is a 3 digit number uniquely defining an object, <i>side</i>
+              is either 0 or 1, since all objects are flipped in order to get full coverage, and the <i>name</i> describes the object. Box scenes have the following convention: <i>box_label_iteration</i>, where the <i>label</i> represents a box with
+              a defined subset of N contained objects, and the <i>iteration</i> relates to the current number of objects in the box (N - iteration). In the first iteration all the objects are in the box, the box is scanned, one object is taken out
+              and then the next iteration starts. This is repeated until there are no objects left in the box.
+              <br>Each sensor folder contains the available raw data for that sensor and an additional folder with pixel-wise labeled images and .json files which include object bounding boxes and polygon vertices used for generating the label
+              image. Objects present in the scene, together with the 3D bounding box size and pose, are stored in the <i>scene_objects.csv</i> file.
+              <br><br>TODO csv format<br><br> All the poses are stored using the quaternion and translation format as described above. The robot's end-effector poses are stored in <i>W_H_poses.csv</i>, and for each sensor, the poses of the RGB
+              camera and the IR cameras are stored in <i>W_RGB_poses.csv</i>, <i>W_IR1_poses.csv</i> and <i>W_IR2_poses.csv</i> respectively. The folder
+              structure is as follows:
+              <center>
+              <div class="col mb-1 p-1">
+                <img class="img-fluid" style="padding-left:25%; padding-right:25%" id="folder_structure" src="img/folder_structure.png" alt="">
+              </div>
+              </center>
+              For each sensor in one scene, we provide the reconstructed point cloud <i>scene_sensor_pointcloud.ply</i> obtained by integrating the point clouds with their corresponding camera poses into TSDF volume. The pixel-wise labels and 2D
+              bounding boxes are stored in json files <i>timestamp_rgb_label.json</i> as follows:
+              <center>
+              <div>
+                <div style="background: #ffffff; padding-top: 2%; margin-left: -50%;"><pre style="margin: 0; line-height: 125%">
+{<span style="color: #aa5500">&quot;poly&quot;</span>:
+                            [[[<span style="color: #aa0000">x00</span>, <span style="color: #aa0000">y00</span>], <span style="color: #aa0000">...</span>, [<span style="color: #aa0000">x0L</span>, <span style="color: #aa0000">y0L</span>]],
+                             <span style="color: #aa0000">...</span>,
+                              [[<span style="color: #aa0000">xN0</span>, <span style="color: #aa0000">yN0</span>], <span style="color: #aa0000">...</span>, [<span style="color: #aa0000">xNL</span>, <span style="color: #aa0000">yNL</span>]]],
+ <span style="color: #aa5500">&quot;bbox&quot;</span>:
+                  [[<span style="color: #aa0000">bx0</span>, <span style="color: #aa0000">by0</span>, <span style="color: #aa0000">w0</span>, <span style="color: #aa0000">h0</span>],
+                   <span style="color: #aa0000">...</span>,
+                    [<span style="color: #aa0000">bxN</span>, <span style="color: #aa0000">byN</span>, <span style="color: #aa0000">wN</span>, <span style="color: #aa0000">hN</span>]],
+  <span style="color: #aa5500">&quot;labels&quot;</span>:
+        [<span style="color: #aa5500">&quot;label0&quot;</span>,
+         <span style="color: #aa0000">...</span>,
+          <span style="color: #aa5500">&quot;labelN&quot;</span>]}
+                </pre></div>
+              </div>
+              </center>
+              where <i>poly</i> is a list of lists of image coordinates that define the surrounding polygon, <i>bbox</i> is a list of lists that contain 2D bounding box coordinates of the top left corner, width and height, and <i>labels</i> is a
+              list of label names corresponding to the names of objects in the dataset. These json files are used to generate the label images <i>timestamp_rgb_label.png</i>. All the pixels in these images have values from 0 to 41, where 0
+              corresponds to the background, and rest of the values correspond to the labels in the json file, i.e. value 1 means it is the first label in the json file, label 2 is the second, etc.
+              <br>By using the provided Python scripts for generating depth images from stereo, computing point clouds from RGB-D images, and registering depth images to the RGB image of the corresponding sensor, additional folders for each sensor
+              are created. Namely, these are <i>stereo_depth_images</i>, <i>point_clouds</i>, and <i>registered_depth_images</i>.
+            </p>
+            <!-- <p>
+              <b>Data usage</b>
+              <br>This dataset can be used for different applications in computer vision and robotics. By providing object and scene models, different object detection algorithms can be tested and evaluated. Furthermore, per-frame labeling of the raw data allows to assess the performance of instance segmentation and object recognition methods or can be used as training data for learning-based methods. Dense reconstruction as well as stereo matching algorithms can be evaluated, since the calibration and raw IR images are provided. Finally, since all the calibration sequences are contained in the dataset, it is well suited to validate and test calibration techniques.
+            </p> -->
           </div>
         </div>
       </div>
@@ -243,12 +341,10 @@
   </section>
 
   <section>
-
-
     <div class="container" id="publication">
       <div class="row align-items-center">
         <div class="col-lg-12 order-lg-1">
-          <div class="p-4">
+          <div class="p-4 text-justify">
             <p><b>PUBLICATION:</b>
               <br>If you are using this dataset please cite the following publication: </p>
             <pre><code>@inproceedings{to_appear,
@@ -265,7 +361,7 @@
     <div class="container" id="download">
       <div class="row align-items-center">
         <div class="col-lg-12">
-          <div class="p-4">
+          <div class="p-4 text-justify">
             <p><b>DOWNLOAD:</b>
               <br>The whole dataset can be downloaded from the following links:
               <ul class="list-unstyled">
@@ -282,7 +378,7 @@
     <div class="container" id="tools">
       <div class="row align-items-center">
         <div class="col-lg-12">
-          <div class="p-4">
+          <div class="p-4 text-justify">
             <p><b>TOOLS:</b>
               <br>This dataset comes with a set of tools which are avilable on our repo: <br>
               <a href="https://github.com/ethz-asl/clubs_dataset_tools">clubs_dataset_tools</a>

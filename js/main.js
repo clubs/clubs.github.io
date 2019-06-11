@@ -103,11 +103,23 @@ function removeDuplicates(arr) {
 }
 
 function buildBoxHtml(boxId) {
-  var html = '<div class="row">';
+  boxFeatures = boxes[boxId].features;
+
+  var html = '<div class="container"><div class="row">';
   html +=
-      '<div class="col-auto pl-5"><center><img class="img-fluid" src="gif/box_' +
-      boxId.toString().padStart(3, '0') + '.gif" alt=""></center></div>';
-  html += '<div class="col px-5"><div class="row">';
+      '<div class="col-6 mb-1 p-1"><center><img class="img-fluid" src="gif/box_' +
+      boxId.toString().padStart(3, '0') +
+      '.gif" alt=""></center><div class="pt-2"><b>Box features:</b><ul>';
+  boxFeatures.forEach((feature, index) => {
+    html += '<li type="circle">' + feature.toString() + '</li>';
+  });
+  html += '</ul></div></div>';
+  html +=
+      '<div class="col-6 mb-1 p-1"><center><img class="img-fluid" src="img/plots/box_' +
+      boxId.toString() + '.png" alt=""></center></div>';
+  html += '</div></div><div class="row">';
+  html +=
+      '<div pt-20>Object contained in this box: </div></div><div class="row">';
 
   boxObjects = boxes[boxId].objects;
   boxObjects = removeDuplicates(boxObjects);
@@ -115,7 +127,7 @@ function buildBoxHtml(boxId) {
     html += buildObjectHtml(objectId);
   });
 
-  html += '</div></div></div>';
+  html += '</div></div>';
   return html;
 }
 

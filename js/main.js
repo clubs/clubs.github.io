@@ -113,7 +113,9 @@ function buildBoxHtml(boxId) {
   boxFeatures.forEach((feature, index) => {
     html += '<li type="circle">' + feature.toString() + '</li>';
   });
-  html += '</ul></div></div>';
+  html += '</ul>';
+  html += 'Download: TODO';
+  html += '</div></div>';
   html +=
       '<div class="col-6 mb-1 p-1"><center><img class="img-fluid" src="img/plots/box_' +
       boxId.toString() + '.png" alt=""></center></div>';

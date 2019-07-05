@@ -67,7 +67,7 @@
       </div>
     </div>
     <div class="col mb-1 p-1">
-      <img class="img-fluid" style="padding-top:2%; padding-left:20%; padding-right:20%" id="teaser" src="img/blending.png" alt="">
+      <img class="img-fluid" style="padding-top: 3%; width: 50%;" id="teaser" src="img/blending.png" alt="">
     </div>
   </header>
 
@@ -78,16 +78,20 @@
           <div class="p-4 text-justify">
             <p><b>DATASET:</b>
               <br>CLUBS is an RGB-D dataset that can be used for segmentation, classification and detetion of household objects in realistic warehouse box scenarios. The dataset contains the object scenes, the reconstructed models, as well as box
-              scenes that contain mutliple objects packed in different configurations. Additionally, the raw scaning data, 2D object bounding boxes and pixel-wise labels in RGB images, and calibration data are also available.
-              <br>The dataset contains 85 object scenes and 25 box scenes. Different box scenes have diffrent configurations of objects in them and vary in clutter level. More details about the specific box scenes can be found by clicking on the
-              scene gif image below.
+              scenes that contain mutliple objects packed in different configurations. Additionally, the raw scaning data, 2D object bounding boxes and pixel-wise labels in RGB images, 3D bounding boxes, and calibration data are also available.
+              <br>The dataset contains 85 object scenes and 25 box scenes. Different box scenes have diffrent configurations of objects in them and vary in clutter level. More details about the specific box scenes can be found by clicking on the scene gif image in the <b>Box scenes</b> section below.
+              <div class="col mb-1 p-1">
+                <center>
+                  <img class="img-fluid" style="width: 60%;" id="setup" src="img/scanning_image.png">
+                </center>
+              </div>
               <br>The data was collected using a robotic arm (UR10) with one RGB (Chameleon3) and three RGB-D (PrimeSense Carmine 1.09, Intel Realsense D415, Intel Realsense D435) cameras. All the cameras were calibrated for intrisic and extrinsic
-              parameters. More details can be found below.
+              parameters. More details about the calibration and notation used can be found below.
             </p>
             <p>
-              <b>Object scenes</b>
+              <b id="object_scenes">Object scenes</b>
               <br>The dataset contains 85 different objects. The path for scanning a single object scene contains 19 different poses at three different height levels. It covers the whole object from every side, except the bottom. Every object was,
-              therefore, rotated and scanned a second time to also cover the bottom face. Some object scene examples:
+              therefore, rotated and scanned a second time to also cover the bottom face.
               <div class="container">
                 <div class="row center-block">
                   <div class="col mb-1 p-1" id="cupholder">
@@ -152,9 +156,9 @@
               </div>
             </p>
             <p>
-              <b>Box scenes</b>
+              <b id="box_scenes">Box scenes</b>
               <br>The robot path for box scenes is shorter and contains 9 poses. These poses were chosen such that the inside of a box of size 58x38x34 cm is covered from all sides including a top-view. The dataset contains 25 different box scenes,
-              where 5 of them have 40 objects and rest 30 objects. Overal object distribution within the boxes is shown below:
+              where 5 of them have 40 objects and rest 30 objects. Overall object distribution within the boxes is shown below:
               <div class="col mb-1 p-1">
                 <img class="img-fluid" id="combined" src="img/plots/combined.png" alt="">
               </div>
@@ -269,7 +273,7 @@
             <p>
               <b>Calibration</b>
               <br>All the raw calibration data and results are available for download below. For the distortion, radial-tangential model was used, represented as:
-              <center><img src="http://latex.codecogs.com/svg.latex?[r_1, r_2, t_1, t_2, r_3]" border="0" /></center><br>
+              <center>$$[r_1, r_2, t_1, t_2, r_3]$$</center>
               All the frames and transformations between the cameras and the robot are displayed in the image below:
               <center>
               <div class="col mb-1 p-1">
@@ -294,19 +298,21 @@
                 </li>
               </ul>
               </code>
-              MATLAB script for obtaining the calibration parameters is available on the CLUBS tools github page.
+              MATLAB script for obtaining the calibration parameters is available on the <a href="https://github.com/ethz-asl/clubs_dataset_tools">clubs_dataset_tools</a> github page.
             </p>
             <p>
               <b>Notation and data structure</b>
               <br>Camera poses are represented by a translation vector and a Hamiltonian unit quaternion:
-              <center><img src="http://latex.codecogs.com/svg.latex?[stamp, t_x, t_y, t_z, q_x, q_y, q_z, q_w]" border="0" /></center><br>
+              <center>$$[stamp, t_x, t_y, t_z, q_x, q_y, q_z, q_w]$$</center>
               Scenes contain either 9 or 19 poses depending on the type of scene being scanned (object or box scene). Object scenes are labeled as: <i>label_side_name</i>, where <i>label</i> is a 3 digit number uniquely defining an object, <i>side</i>
               is either 0 or 1, since all objects are flipped in order to get full coverage, and the <i>name</i> describes the object. Box scenes have the following convention: <i>box_label_iteration</i>, where the <i>label</i> represents a box with
               a defined subset of N contained objects, and the <i>iteration</i> relates to the current number of objects in the box (N - iteration). In the first iteration all the objects are in the box, the box is scanned, one object is taken out
               and then the next iteration starts. This is repeated until there are no objects left in the box.
-              <br>Each sensor folder contains the available raw data for that sensor and an additional folder with pixel-wise labeled images and .json files which include object bounding boxes and polygon vertices used for generating the label
-              image. Objects present in the scene, together with the 3D bounding box size and pose, are stored in the <i>scene_objects.csv</i> file.
-              <br><br>TODO csv format<br><br> All the poses are stored using the quaternion and translation format as described above. The robot's end-effector poses are stored in <i>W_H_poses.csv</i>, and for each sensor, the poses of the RGB
+              <br>Each sensor folder contains the available raw data for that sensor and an additional folder with pixel-wise labeled images and .json files which include object 2D bounding boxes and polygon vertices used for generating the label
+              image. Objects present in the scene, together with the 3D bounding box size and pose, are stored in the <i>scene_objects.csv</i> file:
+              <center>$$[object\_id, x, y, z, qx, qy, qz, qw, size_x, size_y, size_z]$$</center>
+              where [x, y, z] vector represents center coordinates, quaternion [qx, qy, qz, qw] represents orientation, and [size<sub>x</sub>, size<sub>y</sub>, size<sub>z</sub>] represents the size of the 3D bounding box.<br>
+              All the poses are also stored using the quaternion and translation format as described above. The robot's end-effector poses are stored in <i>W_H_poses.csv</i>, and for each sensor, the poses of the RGB
               camera and the IR cameras are stored in <i>W_RGB_poses.csv</i>, <i>W_IR1_poses.csv</i> and <i>W_IR2_poses.csv</i> respectively. The folder
               structure is as follows:
               <code>
@@ -358,7 +364,7 @@
               </ul>
               </code>
 
-              For each sensor in one scene, we provide the reconstructed point cloud <i>scene_sensor_pointcloud.ply</i> obtained by integrating the point clouds with their corresponding camera poses into TSDF volume. The pixel-wise labels and 2D
+              For each sensor in one scene, we provide the reconstructed point cloud <i>scene_sensor_pointcloud.ply</i> obtained by integrating the point clouds with their corresponding camera poses into a TSDF volume. The pixel-wise labels and 2D
               bounding boxes are stored in json files <i>timestamp_rgb_label.json</i> as follows:
               <div>
                 <pre><code class="language-json">{"poly":
@@ -375,7 +381,7 @@
          "labelN"]}</code></pre>
               </div>
               where <i>poly</i> is a list of lists of image coordinates that define the surrounding polygon, <i>bbox</i> is a list of lists that contain 2D bounding box coordinates of the top left corner, width and height, and <i>labels</i> is a
-              list of label names corresponding to the names of objects in the dataset. These json files are used to generate the label images <i>timestamp_rgb_label.png</i>. All the pixels in these images have values from 0 to 41, where 0
+              list of label names corresponding to the names of objects present in the scene. These json files are used to generate the label images <i>timestamp_rgb_label.png</i>. All the pixels in these images have values from 0 to 41, where 0
               corresponds to the background, and rest of the values correspond to the labels in the json file, i.e. value 1 means it is the first label in the json file, label 2 is the second, etc.
               <br>By using the provided Python scripts for generating depth images from stereo, computing point clouds from RGB-D images, and registering depth images to the RGB image of the corresponding sensor, additional folders for each sensor
               are created. Namely, these are <i>stereo_depth_images</i>, <i>point_clouds</i>, and <i>registered_depth_images</i>.
@@ -413,7 +419,7 @@
         <div class="col-lg-12">
           <div class="p-4 text-justify">
             <p><b>DOWNLOAD:</b>
-              <br>The whole dataset can be downloaded from the following links:
+              <br>Individual object scenes can be downloaded from the list in the <a href="#object_scenes">Object scenes</a> section. Furthermore, individual box scenes can be downloaded by clicking on the scene image in <a href="#box_scenes">Box scenes</a> section. Finally, the whole dataset can be downloaded using the following links:
               <ul class="list-unstyled">
                 <li><a href="http://robotics.ethz.ch/~asl-datasets/2018_CLUBS_Dataset/CLUBS_dataset_sample_data_small.zip">Sample Data</a></li>
                 <li><a href="#">Object Scenes (Coming soon)</a></li>
@@ -463,6 +469,8 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
 
   <!-- <script src="https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+json"></script> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>

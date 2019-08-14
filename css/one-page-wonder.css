@@ -77,6 +77,10 @@ header.masthead .masthead-content .masthead-authors {
   padding-top: calc(1rem);
 }
 
+[id^=thumbnail_obj_] {
+  cursor: pointer;
+}
+
 [id^=thumbnail_box_] {
   cursor: pointer;
 }

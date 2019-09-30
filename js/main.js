@@ -76,7 +76,7 @@ function buildObjectSceneHtml(objectScene) {
   html += '<td><span><center>' + objectScene.shape + '</center></span></td>';
   html += '<td><span><center>' + objectScene.rigidity + '</center></span></td>';
   html += '<td><span><center>' +
-      'TODO' +
+      'Coming Soon' +
       '</center></span></td>';
   html += '</tr>';
   return html;
@@ -114,7 +114,7 @@ function buildBoxHtml(boxId) {
     html += '<li type="circle">' + feature.toString() + '</li>';
   });
   html += '</ul>';
-  html += 'Download: TODO';
+  html += 'Download: Coming Soon';
   html += '</div></div>';
   html +=
       '<div class="col-6 mb-1 p-1"><center><img class="img-fluid" src="img/plots/box_' +

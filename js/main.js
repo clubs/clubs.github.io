@@ -75,9 +75,13 @@ function buildObjectSceneHtml(objectScene) {
       '</center></span></td>';
   html += '<td><span><center>' + objectScene.shape + '</center></span></td>';
   html += '<td><span><center>' + objectScene.rigidity + '</center></span></td>';
-  html += '<td><span><center>' +
-      'Coming Soon' +
-      '</center></span></td>';
+  html += '<td><span><center>';
+  html +=
+      '<a href="http://robotics.ethz.ch/~asl-datasets/2019_CLUBS_Dataset/object_';
+  html += objectScene.id.toString().padStart(3, '0');
+  html += '.zip">Raw data</a>';
+  html += '<br>Rest coming soon';
+  html += '</center></span></td>';
   html += '</tr>';
   return html;
 }
@@ -114,8 +118,13 @@ function buildBoxHtml(boxId) {
     html += '<li type="circle">' + feature.toString() + '</li>';
   });
   html += '</ul>';
-  html += 'Download: Coming Soon';
-  html += '</div></div>';
+  html += '<b>Download:</b><ul>';
+  html +=
+      '<li type="circle"><a href="http://robotics.ethz.ch/~asl-datasets/2019_CLUBS_Dataset/box_';
+  html += boxId.toString().padStart(3, '0');
+  html += '.zip">Raw data</a>';
+  html += '<li type="circle">Rest Coming Soon</li>';
+  html += '</ul></div></div>';
   html +=
       '<div class="col-6 mb-1 p-1"><center><img class="img-fluid" src="img/plots/box_' +
       boxId.toString() + '.png" alt=""></center></div>';

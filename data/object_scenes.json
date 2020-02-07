@@ -1,7 +1,7 @@
 {"object_scenes": [
  {
    "id": 0,
-   "name": "veet spawax",
+   "name": "veet",
    "category": "personal hygiene",
    "sub_category": "shaving and hair removal",
    "sub_sub_category": "wax",
@@ -31,10 +31,10 @@
  },
  {
    "id": 3,
-   "name": "underware",
+   "name": "sports underwear",
    "category": "children products",
    "sub_category": "clothing",
-   "sub_sub_category": "underware",
+   "sub_sub_category": "underwear",
    "shape": "box",
    "rigidity": "rigid",
    "packaging": "no"
@@ -61,7 +61,7 @@
  },
  {
    "id": 6,
-   "name": "wellnes book",
+   "name": "wellness book",
    "category": "media",
    "sub_category": "book",
    "sub_sub_category": "voucher",
@@ -161,7 +161,7 @@
  },
  {
    "id": 16,
-   "name": "baby bottle",
+   "name": "bibi bottle",
    "category": "children products",
    "sub_category": "food",
    "sub_sub_category": "bottles",
